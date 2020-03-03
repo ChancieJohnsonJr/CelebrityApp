@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"/>
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/etCelebID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celebrity ID"/>
+
+    <EditText
+        android:id="@+id/etIsFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Is Favorite"/>
+
+    <Button
+        android:id="@+id/btnAddCelebrityToList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD CELEBRITY TO LIST"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnDeleteCelebrityFromList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DELETE CELEBRITY TO LIST"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnUpdateCelebrityToList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE CELEBRITY TO LIST"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnGetListUsingContentProvider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use Content Provider To populate List"
+        android:onClick="onContentProviderClicked"/>
+
 </LinearLayout>

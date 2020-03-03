@@ -1,18 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A79B8"
     tools:context=".MainActivity">
 
-    <TextView
+   <Button
+       android:id="@+id/btnAddCelebrityToList"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:onClick="onClick"
+       android:layout_margin="20dp"
+       android:text="Add Celebrity To Database"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnViewAllCelebs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_margin="20dp"
+        android:text="View All Celebrities"
+        app:layout_constraintTop_toBottomOf="@id/btnAddCelebrityToList"
+        app:layout_constraintEnd_toEndOf="@id/btnAddCelebrityToList" />
+
+    <Button
+        android:id="@+id/btnUpdateCelebrityToList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_margin="20dp"
+        android:text="Update A Celebrity"
+        app:layout_constraintTop_toBottomOf="@id/btnViewAllCelebs"
+        app:layout_constraintEnd_toEndOf="@id/btnViewAllCelebs" />
+
+    <ImageButton
+        android:id="@+id/ibnRemoveCeleb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="onClick"
+        app:srcCompat="@android:drawable/btn_dialog"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnUpdateCelebrityToList"
+        app:layout_constraintEnd_toEndOf="@id/btnUpdateCelebrityToList" />
+
+    <ImageButton
+        android:id="@+id/ibnMarkFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnUpdateCelebrityToList"
+        app:layout_constraintStart_toStartOf="@id/btnUpdateCelebrityToList" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorite                          Delete"
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@id/btnUpdateCelebrityToList"
+        app:layout_constraintEnd_toStartOf="@id/ibnRemoveCeleb" />
+
+    <Button
+        android:id="@+id/btnViewFaves"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="View Favorite Celebrities"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ibnMarkFavorite"
+        app:layout_constraintStart_toStartOf="@id/ibnRemoveCeleb" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,29 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/itemTheme"/>
+
+    <TextView
+        android:id="@+id/tvLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/itemTheme"/>
+
+    <TextView
+        android:id="@+id/tvCelebID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/job_field"/>
+
+    <TextView
+        android:id="@+id/tvIsFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/id_field"/>
+
 </LinearLayout>
