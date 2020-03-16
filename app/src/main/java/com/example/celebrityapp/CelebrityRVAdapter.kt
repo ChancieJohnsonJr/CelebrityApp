@@ -27,8 +27,8 @@ class CelebrityRVAdapter(var celebrityList : ArrayList<Celebrity>, val callback:
         fun populateCelebrityItem(celebrity: Celebrity) {
             itemView.tvFirstName.text = celebrity.firstName
             itemView.tvLastName.text = celebrity.lastName
-            itemView.tvJob.text = celebrity.job
-            itemView.tvId.text = celebrity.id
+            itemView.tvCelebID.text = celebrity.celebId
+            itemView.tvIsFavorite.text = celebrity.isFavorite
             itemView.setOnClickListener { callback.passCelebrity(celebrity) }
         }
     }

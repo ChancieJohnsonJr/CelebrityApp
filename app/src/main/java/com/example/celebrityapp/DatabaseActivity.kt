@@ -21,8 +21,8 @@ abstract class DatabaseActivity : AppCompatActivity(), CelebrityCallback {
     override fun passCelebrity(celebrity: Celebrity) {
         etFirstName.setText(celebrity.firstName)
         etLastName.setText(celebrity.lastName)
-        etJob.setText(celebrity.job)
-        etId.setText(celebrity.id)
+        etCelebID.setText(celebrity.celebId)
+        etIsFavorite.setText(celebrity.isFavorite)
     }
 
     fun onClick(view: View) {
